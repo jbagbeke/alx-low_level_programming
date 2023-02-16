@@ -1,2 +1,2 @@
 #!/bin/bash
-base_name=$(basename "$CFILE" .c); gcc -c '$CFILE' -o '$base_name.o';
+gcc -c '$CFILE' -o '$CFILE.o'
