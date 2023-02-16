@@ -1,2 +1,2 @@
 #!/bin/bash
-export base_name=$CFILE; gcc -c '$CFILE' -o '$base_name.o';
+base_name=$(basename "$CFILE" .c); gcc -c '$CFILE' -o '$base_name.o';
