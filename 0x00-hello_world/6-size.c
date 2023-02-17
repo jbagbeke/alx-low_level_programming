@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 /**
  * main - Entry point
  *
@@ -15,6 +16,8 @@ int main(void)
     printf("Size of float: %lu bytes\n", sizeof(float));
     printf("Size of double: %lu bytes\n", sizeof(double));
     printf("Size of long double: %lu bytes\n", sizeof(long double));
+    printf("Size of intptr_t: %lu bytes\n", sizeof(intptr_t));
     return 0;
 }
+
 
