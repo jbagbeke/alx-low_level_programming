@@ -3,11 +3,10 @@
 /**
  * main - Entry point
  *
- * Return: 0 (Success)
+ * Return: Always (0) (Success)
  */
-
 int main(void)
 {
-	print("_putchar\n");
-	(return 0);
+	printf("_putchar\n");
+	return (0);
 }
