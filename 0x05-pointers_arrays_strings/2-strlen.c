@@ -8,5 +8,5 @@
 
 int _strlen(char *s)
 {
-	printf("The value of 'string *s' is: %lu\n", *s);
+	printf("The value of 'string *s' is: %d\n", strlen(*s));
 }
