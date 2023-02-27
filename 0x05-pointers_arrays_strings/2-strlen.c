@@ -2,11 +2,17 @@
 #include <stdio.h>
 
 /**
- * int _strlen - Hehehe
+ * _strlen - Returns length of string
  * @s: input which is a character
  */
 
 int _strlen(char *s)
 {
-	printf("The value of 'string *s' is: %d\n", strlen(*s));
+	int length = 0;
+
+	while (*s != '\0')
+{	length++;
+	s++;
+}
+	return (length);
 }
