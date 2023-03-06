@@ -8,9 +8,14 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char *s = &accept;
-	int len = strnlen(*s, 6);
+	char *s = accept;
+	int count = 0;
 
-	printf("The length of the prefix substring is: %d\n", len);
-	return (0);
+	while (*s != '\0')
+	{
+		while (*s && strchr(accept, *s++);
+	}
+	count++;
+
+	return (count);
 }
