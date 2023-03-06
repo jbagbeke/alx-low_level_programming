@@ -5,16 +5,15 @@
  * @(*a)[8]): Chessboard character
  * Return: void
  */
-void print_chessboard(char (*a)[8])
-{
-	int i, j;
+void print_chessboard(char (*a)[8]) {
+    char row, col;
 
-	for (i = 0; i < 8; i++)
-{
-	for (j = 0; j < 8; j++)
-{
-	printf("%c ", a[i][j]);
-}
-	printf("\n");
-}
+    for (row = '8'; row >= '1'; row--) {
+        printf("%c ", row);
+        for (col = 'a'; col <= 'h'; col++) {
+            printf("%c ", a[row - '1'][col - 'a']);
+        }
+        printf("\n");
+    }
+    printf("  a b c d e f g h\n");
 }
