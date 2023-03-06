@@ -11,8 +11,8 @@ unsigned int _strspn(char *s, char *accept)
 	char *p = accept;
 	int count = 0;
 
+	while (*s && strchr(accept, *s++))
 	{
-	while (*s && strchr(accept, *s++));
 	count++;
 	}
 
