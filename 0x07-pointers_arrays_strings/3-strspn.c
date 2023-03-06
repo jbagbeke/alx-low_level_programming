@@ -13,9 +13,11 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s != '\0')
 	{
+	{
 		while (*s && strchr(accept, *s++));
 	}
 	count++;
+	}
 
 	return (count);
 }
