@@ -8,7 +8,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char *s = accept;
+	char *s = &accept;
 	int len = strspn(*s, 6);
 
 	printf("The length of the prefix substring is: %d\n", s);
