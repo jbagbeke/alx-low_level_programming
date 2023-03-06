@@ -8,13 +8,13 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char *p = accept;
 	int count = 0;
+	char *p = accept;
 
 	while (*s && strchr(accept, *s++))
 	{
 	count++;
 	}
 
-	return (count);
+	return count;
 }
