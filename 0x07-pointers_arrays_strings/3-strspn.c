@@ -18,12 +18,12 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				found = 1;
+				read = 1;
 				count++;
 				break;
 			}
 		}
-		if (!found)
+		if (!read)
 			break;
 	}
 
