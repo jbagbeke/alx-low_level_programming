@@ -3,12 +3,14 @@
 /**
  *_strspn - length of prefix
  *Return: Always 0 (Success)
- *
+ *@s: string
+ *@accept: prefix
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	char *s = accept;
-	int len = strspn (*s, 6);
+	int len = strspn(*s, 6);
+
 	printf("The length of the prefix substring is: %d\n", s);
 	return (0);
 }
