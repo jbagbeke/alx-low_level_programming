@@ -1,0 +1,21 @@
+!<arch>
+_putchar.c/     0           0     0     644     0         `
+_islower.c/     0           0     0     644     0         `
+_isalpha.c/     0           0     0     644     0         `
+_abs.c/         0           0     0     644     0         `
+_isupper.c/     0           0     0     644     0         `
+_isdigit.c/     0           0     0     644     0         `
+_strlen.c/      0           0     0     644     0         `
+_puts.c/        0           0     0     644     0         `
+_strcpy.c/      0           0     0     644     0         `
+_atoi.c/        0           0     0     644     0         `
+_strcat.c/      0           0     0     644     0         `
+_strncat.c/     0           0     0     644     0         `
+_strncpy.c/     0           0     0     644     0         `
+_strcmp.c/      0           0     0     644     0         `
+_memset.c/      0           0     0     644     0         `
+_memcpy.c/      0           0     0     644     0         `
+_strchr.c/      0           0     0     644     0         `
+_strspn.c/      0           0     0     644     0         `
+_strpbrk.c/     0           0     0     644     0         `
+_strstr.c/      0           0     0     644     0         `
