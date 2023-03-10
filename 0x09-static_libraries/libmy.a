@@ -11,3 +11,76 @@ int _putchar(char c)
 	_putchar(c);
 	return (0);
 }
+_islower.c/     0           0     0     644     128       `
+#include "main.h"
+/**
+ *_islower - Function
+ *@c: integer C
+ *Return: 0
+ */
+int _islower(int c)
+{
+	_islower(87);
+	return (0);
+}
+_isalpha.c/     0           0     0     644     136       `
+#include "main.h"
+/**
+ *_isalpha - Function prototype
+ *@c: Integer
+ *Return: 0
+ */
+int _isalpha(int c)
+{
+	_isalpha(98);
+	return (0);
+}
+_abs.c/         0           0     0     644     124       `
+#include "main.h"
+/**
+ *_abs - Function Prototype
+ *@n: Integer
+ *Return: 0
+ */
+int _abs(int n)
+{
+	_abs(77);
+	return (0);
+}
+_isupper.c/     0           0     0     644     126       `
+#include "main.h"
+/**
+ *_isupper - Function
+ *@n: Integer
+ *Return: 0
+ */
+int _isupper(int c)
+{
+	_isupper(88);
+	return (0);
+}
+_isdigit.c/     0           0     0     644     127       `
+#include "main.h"
+/**
+ *_isdigit - Function
+ *@n: Integer
+ *Return: 0
+ */
+int _isdigit(int c)
+{
+	_isdigit(975);
+	return (0);
+}
+
+_strlen.c/      0           0     0     644     128       `
+#include "main.h"
+/**
+ *_strlen - Function
+ *@s: Character S
+ *Return: 0
+ */
+int _strlen(char *s)
+{
+	_strlen(s);
+	return (0);
+}
