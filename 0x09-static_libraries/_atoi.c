@@ -2,7 +2,7 @@
 /**
  *_atoi - Function
  *@s: Character
- *Return; Void
+ *Return: Void
  */
 int _atoi(char *s)
 {

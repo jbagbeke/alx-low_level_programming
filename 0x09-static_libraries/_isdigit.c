@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_isdigit - Function
- *@n: Integer
+ *@c: Integer
  *Return: 0
  */
 int _isdigit(int c)
