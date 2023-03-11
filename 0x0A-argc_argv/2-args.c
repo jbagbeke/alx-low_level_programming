@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>i
+#include "main.h"
 /**
  *main - Entry point
  *@argc: Counter
