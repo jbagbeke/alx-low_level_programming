@@ -9,10 +9,9 @@
  */
 int main(int argc, *argv[])
 {
-	printf("The file name is: %s", argv[0]);
-	for (i = 0; i < argc; i++)
-	{
-	printf("The file name is: %s", argv[i]);
-	}
+	char path[200];
+
+	realpath(argv[0], path);
+	printf("The file name is: %s", path);
 	return (0);
 }
