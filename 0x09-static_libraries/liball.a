@@ -1,0 +1,250 @@
+!<arch>
+_abs.c/         0           0     0     644     124       `
+#include "main.h"
+/**
+ *_abs - Function Prototype
+ *@n: Integer
+ *Return: 0
+ */
+int _abs(int n)
+{
+	_abs(77);
+	return (0);
+}
+_atoi.c/        0           0     0     644     110       `
+#include "main.h"
+/**
+ *_atoi - Function
+ *@s: Character
+ *Return: Void
+ */
+int _atoi(char *s)
+{
+	_atoi(s);
+}
+_isalpha.c/     0           0     0     644     136       `
+#include "main.h"
+/**
+ *_isalpha - Function prototype
+ *@c: Integer
+ *Return: 0
+ */
+int _isalpha(int c)
+{
+	_isalpha(98);
+	return (0);
+}
+_isdigit.c/     0           0     0     644     127       `
+#include "main.h"
+/**
+ *_isdigit - Function
+ *@c: Integer
+ *Return: 0
+ */
+int _isdigit(int c)
+{
+	_isdigit(975);
+	return (0);
+}
+
+_islower.c/     0           0     0     644     128       `
+#include "main.h"
+/**
+ *_islower - Function
+ *@c: integer C
+ *Return: 0
+ */
+int _islower(int c)
+{
+	_islower(87);
+	return (0);
+}
+_isupper.c/     0           0     0     644     126       `
+#include "main.h"
+/**
+ *_isupper - Function
+ *@c: Integer
+ *Return: 0
+ */
+int _isupper(int c)
+{
+	_isupper(88);
+	return (0);
+}
+_memcpy.c/      0           0     0     644     184       `
+#include "main.h"
+/**
+ *_memcpy - Function
+ *@dest: CHar
+ *@src: char
+ *@n: Integer
+ *Return: Void
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	_memcpy(dest, src, 5);
+}
+_memset.c/      0           0     0     644     178       `
+#include "main.h"
+/**
+ *_memset - Function prototype
+ *@s: Char
+ *@b: Char
+ *@n: Integer
+ *Return: void
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	_memset(s, b, 7);
+}
+_putchar.c/     0           0     0     644     130       `
+#include "main.h"
+/**
+ *_putchar - Function
+ *@c: character C
+ *Return: 0
+ */
+int _putchar(char c)
+{
+	_putchar(c);
+	return (0);
+}
+_puts.c/        0           0     0     644     111       `
+#include "main.h"
+/**
+ *_puts - Function
+ *@s: Character
+ *Return; Void
+ */
+void _puts(char *s)
+{
+	_puts(s);
+}
+
+_strcat.c/      0           0     0     644     159       `
+#include "main.h"
+/**
+ *_strcat - Function
+ *@dest: Pointer
+ *@src: Pointer 2
+ *Return: void
+ */
+char *_strcat(char *dest, char *src)
+{
+	_strcat(dest, src);
+}
+
+_strchr.c/      0           0     0     644     147       `
+#include "main.h"
+/**
+ *_strchr - Function
+ *@s: Character s
+ *@c: Character
+ *Return: Void
+ */
+char *_strchr(char *s, char c)
+{
+	_strchr(s, c);
+}
+
+_strcmp.c/      0           0     0     644     142       `
+#include "main.h"
+/**
+ *_strcmp - Function
+ *@s1: CHar
+ *@s2: Char 2
+ *Return: void
+ */
+int _strcmp(char *s1, char *s2)
+{
+	_strcmp(s1, s2);
+}
+_strcpy.c/      0           0     0     644     156       `
+#include "main.h"
+/**
+ *_strcpy - Function
+ *@dest: Character
+ *@src: Char
+ *Return: Void
+ */
+char *_strcpy(char *dest, char *src)
+{
+	_strcpy(dest, src);
+}
+_strlen.c/      0           0     0     644     128       `
+#include "main.h"
+/**
+ *_strlen - Function
+ *@s: Character S
+ *Return: 0
+ */
+int _strlen(char *s)
+{
+	_strlen(s);
+	return (0);
+}
+_strncat.c/     0           0     0     644     178       `
+#include "main.h"
+/**
+ *_strncat - Function
+ *@dest: Char
+ *@src: Char
+ *@n: integer
+ *Return: Void
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	_strncat(dest, src, 9);
+}
+_strncpy.c/     0           0     0     644     189       `
+#include "main.h"
+/**
+ *_strncat - Function
+ *@dest: Pointer 1
+ *@src: Pointer 2
+ *Return: void
+ *@n: Integer
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	_strncat(dest, src, 98);
+}
+
+_strpbrk.c/     0           0     0     644     164       `
+#include "main.h"
+/**
+ *_strpbrk - Function
+ *@s: Character
+ *@accept: character
+ *Return: void
+ */
+char *_strpbrk(char *s, char *accept)
+{
+	_strpbrk(s, accept);
+}
+_strspn.c/      0           0     0     644     169       `
+#include "main.h"
+/**
+ *_strspn - Function Prototype
+ *@s: CHar
+ *@accept: Charr
+ *Return: void
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	_strspn(s, accept);
+}
+
+_strstr.c/      0           0     0     644     177       `
+#include "main.h"
+/**
+ *_strstr - Function
+ *@haystack: Char
+ *@needle: Character
+ *Return: Void
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	_strstr(haystack, needle);
+}
+
