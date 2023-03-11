@@ -9,9 +9,6 @@
  */
 int main(int argc, *argv[])
 {
-	char path[200];
-
-	realpath(argv[0], path);
-	printf("The file name is: %s\n", path);
+	printf("The file name is: %s\n", strrchr(argv[0], '/'));
 	return (0);
 }
