@@ -17,11 +17,6 @@ char *create_array(unsigned int size, char c)
 
 	bee = malloc(size * sizeof(char));
 
-	while (i = 0; i < size; i++)
-	{
-	bee[i] = c;
-	}
-
 	if (bee == NULL)
 	{
 	printf("Memory allocation failed\n");
@@ -51,11 +46,6 @@ int main(void)
 	if (bee != NULL)
 	{
 	printf("The array of size %u is initialised to %c\n", size, c);
-
-	while (i = 0; i < size; i++)
-	{
-		printf("%c", bee[i]);
-	}
 
 	free(bee);
 	}
