@@ -17,38 +17,16 @@ char *create_array(unsigned int size, char c)
 
 	bee = malloc(size * sizeof(char));
 
-	if (bee == NULL)
+	if (bee == NULL || size == 0)
 	{
 	printf("Memory allocation failed\n");
 	return (NULL);
-	}
-	return (bee);
-}
-
-/**
- * main - Entry point
- * Return: 0 (Success)
- */
-int main(void)
-{
-	unsigned int size;
-	char c;
-	char *bee;
-	unsigned int i;
-
-	printf("Enter the size of array: \n");
-	scanf("%u", &size);
-	printf("Enter char you want to initialise to: \n");
-	scanf(" %c", &c);
-
-	bee = create_array(size, c);
-
-	if (bee != NULL)
+	
+	for (i = 0; i < size; i++)
 	{
-	printf("The array of size %u is initialised to %c\n", size, c);
-
+		bee[i] = c
+	}
 	free(bee);
 	}
-
-	return (0);
+	return (bee);
 }
