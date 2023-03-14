@@ -13,10 +13,11 @@
 char *create_array(unsigned int size, char c)
 {
 	char *bee;
+	unsigned int i;
 
 	bee = malloc(size * sizeof(char));
 
-	while (unsigned int i = 0; i < size; i++)
+	while (i = 0; i < size; i++)
 	{
 	bee[i] = c;
 	}
@@ -38,6 +39,7 @@ int main(void)
 	unsigned int size;
 	char c;
 	char *bee;
+	unsigned int i;
 
 	printf("Enter the size of array: \n");
 	scanf("%u", &size);
@@ -50,7 +52,7 @@ int main(void)
 	{
 	printf("The array of size %u is initialised to %c\n", size, c);
 
-	while (unsigned int i = 0; i < size; i++)
+	while (i = 0; i < size; i++)
 	{
 		printf("%c", bee[i]);
 	}
