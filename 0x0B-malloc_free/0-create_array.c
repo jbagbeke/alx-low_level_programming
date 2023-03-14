@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * create_array - Prototype
@@ -22,7 +23,7 @@ char *create_array(unsigned int size, char c)
 
 	if (bee == NULL)
 	{
-	printf("Memory allocation failed");
+	printf("Memory allocation failed\n");
 	return (NULL);
 	}
 	return (bee);
@@ -37,16 +38,16 @@ int main(void)
 	unsigned int size;
 	char c;
 
-	printf("Enter the size of array: ");
+	printf("Enter the size of array: \n");
 	scanf("%u", &size);
-	printf("Enter char you want to initialise to: ");
+	printf("Enter char you want to initialise to: \n");
 	scanf(" %c", &c);
 
 	char *bee = create_array(size, c);
 
 	if (bee != NULL)
 	{
-	printf("The array of size %u is initialised to %c", size, c);
+	printf("The array of size %u is initialised to %c\n", size, c);
 
 	for (int i = 0; i < size; i++)
 	{
