@@ -16,9 +16,12 @@ char *create_array(unsigned int size, char c)
 
 	bee = malloc(sizeof(char) * size);
 	if (size == 0 || bee == NULL)
+	{	
 		return (NULL);
-
+	}
 	for (i = 0; i < size; i++)
-	bee[i] = c;
+	{
+		bee[i] = c;
+	}
 	return (bee);
 }
