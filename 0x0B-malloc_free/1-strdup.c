@@ -4,7 +4,7 @@
 /**
  *_strdup - Function
  *@str: String to be accepted
- *REturn: Hey
+ *Return: Hey
  *
  */
 char *_strdup(char *str)
