@@ -9,10 +9,9 @@
  */
 char *_strdup(char *str)
 {
-	int size;
-	char *hey;
+	int size = 50;
+	char *hey[100];
 
-	str = &hey;
 	str = malloc(size * sizeof(*hey));
 	if (str == NULL)
 	{
