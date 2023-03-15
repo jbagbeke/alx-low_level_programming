@@ -2,25 +2,29 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
- *
+ *_strdup - Function
+ *@str: String to be accepted
+ *REturn: Hey
  *
  */
 char *_strdup(char *str)
 {
-	int size = 0;
 	char *hey;
+	int i, r = 0;
 
-	for (size != '\0'; size++)
-	{
-	hey = malloc((size + 1) * sizeof(char));
-	}
-	hey[size] = str[size];
 	if (str == NULL)
-	{
-		printf("failed to allocate memory\n");
 		return (NULL);
-	}
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+
+	hey = malloc(sizeof(char) * (i + 1));
+
+	if (hey == NULL)
+		return (NULL);
+
+	for (r = 0; str[r]; r++)
+		hey[r] = str[r];
+
 	return (hey);
 }
