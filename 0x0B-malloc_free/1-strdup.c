@@ -9,7 +9,7 @@
  */
 char *_strdup(char *str)
 {
-	int size = 50;
+	int size = 10;
 	char *hey[100];
 
 	str = malloc(size * sizeof(*hey));
@@ -17,6 +17,5 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	free(str);
 	return (str);
 }
