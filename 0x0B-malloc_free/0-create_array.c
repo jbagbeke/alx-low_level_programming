@@ -9,7 +9,6 @@
  * @c: character to be initialised to
  * Return: bee (success), NULL (Fail)
  */
-
 char *create_array(unsigned int size, char c)
 {
 	char *bee;
@@ -20,11 +19,11 @@ char *create_array(unsigned int size, char c)
 	if (bee == NULL || size == 0)
 	{
 	return (NULL);
-	
-	for (i = 0; i < size; i++)
-	{
-		bee[i] = c;
 	}
+	for (i = 0; i < size; i++)
+        {
+                bee[i] = c;
+        }
 	free(bee);
 	}
 	return (bee);
