@@ -14,17 +14,11 @@ char *create_array(unsigned int size, char c)
 	char *bee;
 	unsigned int i;
 
-	bee = malloc(size * sizeof(char));
+	bee = malloc(sizeof(char) * size);
+	if (size == 0 || bee == NULL)
+		return (NULL);
 
-	if (bee == NULL || size == 0)
-	{
-	return (NULL);
 	for (i = 0; i < size; i++)
-        {
-                bee[i] = c;
-        }
-	}
-	free(bee);
-	}
+	bee[i] = c;
 	return (bee);
 }
