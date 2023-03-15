@@ -9,14 +9,18 @@
  */
 char *_strdup(char *str)
 {
-	int size = 10;
-	char *hey[100];
+	int size = 0;
+	char *hey;
 
-	str = malloc(size * sizeof(*hey));
+	for (size != '\0'; size++)
+	{
+	hey = malloc((size + 1) * sizeof(char));
+	}
+	hey[size] = str[size];
 	if (str == NULL)
 	{
 		printf("failed to allocate memory\n");
 		return (NULL);
 	}
-	return (str);
+	return (hey);
 }
