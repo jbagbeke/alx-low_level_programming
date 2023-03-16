@@ -3,8 +3,8 @@
 #include "main.h"
 #include <limits.h>
 /**
- *
- *
+ *malloc_checked - Function that takes one argument
+ *@b: An unsigned int
  *
  *
  *
