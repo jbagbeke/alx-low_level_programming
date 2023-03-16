@@ -11,7 +11,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int size = 1;
+	int size;
 	char *hey;
 
 	hey = malloc(size * sizeof(unsigned int));
@@ -19,5 +19,10 @@ void *malloc_checked(unsigned int b)
 	if (hey == 0)
 	{
 		return (98);
+	}
+	
+	else
+	{
+		free(hey);
 	}
 }
