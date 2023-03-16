@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-#include <limits.h>
 /**
  *malloc_checked - Function that takes one argument
  *@b: An unsigned int
@@ -17,7 +16,7 @@ void *malloc_checked(unsigned int b)
 
 	hey = malloc(size * sizeof(unsigned int));
 
-	if (hey != 0)
+	if (hey != NULL)
 	{
 		free(hey);
 	}
