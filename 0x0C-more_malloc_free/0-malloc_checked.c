@@ -15,15 +15,15 @@ void *malloc_checked(unsigned int b)
 	char *hey;
 	int size;
 
-	hey = malloc(size * sizeof(UINT_MAX));
+	hey = malloc(size * sizeof(unsigned int));
 
-	if (hey = 0)
+	if (hey != 0)
 	{
-		exit(98);
+		free(hey);
 	}
 	
 	else
 	{
-		free(hey);
+		exit(98);
 	}
 }
