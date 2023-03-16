@@ -12,9 +12,8 @@
 void *malloc_checked(unsigned int b)
 {
 	char *hey;
-	int size;
 
-	hey = malloc(size * sizeof(unsigned int));
+	hey = malloc(b);
 
 	if (hey != NULL)
 	{
