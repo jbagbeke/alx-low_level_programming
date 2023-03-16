@@ -11,10 +11,9 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int size;
 	char *hey;
 
-	hey = malloc(size * sizeof(unsigned int));
+	hey = malloc(size * sizeof(UINT_MAX));
 
 	if (hey == 0)
 	{
@@ -25,4 +24,5 @@ void *malloc_checked(unsigned int b)
 	{
 		free(hey);
 	}
+	return (hey);
 }
