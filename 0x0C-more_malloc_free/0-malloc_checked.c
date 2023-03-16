@@ -6,7 +6,7 @@
  *@b: An unsigned int
  *
  *
- *
+ *Return: void
  *
  */
 void *malloc_checked(unsigned int b)
