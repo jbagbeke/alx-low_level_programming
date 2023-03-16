@@ -13,17 +13,18 @@
 void *malloc_checked(unsigned int b)
 {
 	char *hey;
+	int size;
+	int status = 98;
 
 	hey = malloc(size * sizeof(UINT_MAX));
 
 	if (hey == 0)
 	{
-		return (98);
+		exit(status);
 	}
 	
 	else
 	{
 		free(hey);
 	}
-	return (hey);
 }
