@@ -13,6 +13,8 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
         char *point;
+	char *pt1 = new_size;
+	char *pt2 = old_size;
 
         point = malloc(new_size);
 
@@ -20,14 +22,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
         {
                 for (int i = 0; i < old_size; i++)
                 {
-                        point[i] = ptr[i];
+                        pt1[i] = pt2[i];
                 }
         }
         if (new_size < old_size)
         {
                 for (int i = 0; i < new_size; i++)
                 {
-                        point[i] = ptr[i];
+                        pt1[i] = pt2[i];
                 }
         }
         if (new_size == old_size)
