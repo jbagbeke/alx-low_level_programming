@@ -3,30 +3,46 @@
 #include "main.h"
 #include <string.h>
 /**
- *
- *
- *
- *
- *
+ *string_nconcat - Function
+ *@s1; string 1
+ *@s2: string 2
+ *@n: unsigned int
+ *Return: Character s
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *result;
-	char *hey;
-
-	result = strcat(s1, s2);
-
-	hey = malloc(sizeof(*result));
+	unsigned int x, y, z;
+	char *s;
 	
-	void *memset(char *hey, *result, n);
-
-	if (hey == NUL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+	x = 0;
 	}
-	if (n >= strlen(s2))
+	else
 	{
-		;
+		for (x = 0; s1[x]; ++x)
+			;
 	}
+	if (s2 == NULL)
+	{
+		y = 0;
+	}
+	else
+	{
+		for (y = 0; s2[y]; ++y)
+	;
+	}
+	if (y > n)
+	y = n;
+	s = malloc(sizeof(char) * (x + y + 1));
+	if (s == NULL)
+ 	return (NULL);
+	for (z = 0; z < x; z++)
+ 	s[z] = s1[z];
+	for (z = 0; z < y; z++)
+ 	s[z + x] = s2[z];
+	s[x + y] = '\0';
+	return (s);
+}
 
 }
