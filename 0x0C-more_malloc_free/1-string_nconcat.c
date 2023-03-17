@@ -12,26 +12,21 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *result;
-	char **hey;
+	char *hey;
 
-	s2[n+1] = '\0';
-	result = strcat(s1, s2[n]);
-	hey = &result;
+	result = strcat(s1, s2);
 
 	hey = malloc(sizeof(*result));
 	
-	if (hey == NULL)
+	void *memset(char *hey, *result, n);
+
+	if (hey == NUL)
 	{
 		return (NULL);
 	}
 	if (n >= strlen(s2))
 	{
-		result = strcat(s1, s2);
+		;
 	}
-	else
-	{
-		result = ' ';
-	}
-	return (hey);
-	free(hey_;
+
 }
