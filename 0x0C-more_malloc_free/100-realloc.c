@@ -19,14 +19,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
         if (new_size > old_size)
         {
-                for (int i = 0; i <= old_size; i++)
+                for (int i = 0; i < old_size; i++)
                 {
                         point[i] = ptr[i];
                 }
         }
         if (new_size < old_size)
         {
-                for (int i = 0; i <= new_size; i++)
+                for (int i = 0; i < new_size; i++)
                 {
                         point[i] = ptr[i];
                 }
