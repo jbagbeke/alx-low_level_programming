@@ -12,60 +12,41 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-        char *point;
-	char *pt2;
+	char *ptr1;
+	char *old_ptr;
+	unsigned int i;
 
-        if (new_size == old_size)
-        {
-                return (ptr);
-        }
+	if (new_size == old_size)
+		return (ptr);
 
-        if (!ptr)
-        {
-                return (malloc(new_size));
-                point = malloc(new_size);
-        }
-        if (!point)
-        {
-                return (NULL);
-                pt2 = ptr;
-        }
-	if (new_size > old_size)
-        {
-                for (unsigned int i = 0; i < old_size; i++)
-                {
-                        point[i] = pt2[i];
-                }
-        }
-        if (new_size < old_size)
-        {
-                for (unsigned int i = 0; i < new_size; i++)
-                {
-                        point[i] = pt2[i];
-                }
-        }
-        if (new_size == old_size)
-        {
-                return (ptr);
-        }
-
-        /**if (!ptr)                                                                                                         
-        {
-                return (malloc(new_size));
-		point = malloc(new_size);
-        }
-	if (!point)
+	if (new_size == 0 && ptr)
 	{
+		free(ptr);
 		return (NULL);
-		pt2 = ptr;
-	}*/
-        if (new_size == 0 && ptr)
-        {
-                free(ptr);
-		return (NULL);
-        }
+	}
 
-        return (point);
-        free(ptr);
+	if (!ptr)
+		return (malloc(new_size));
+
+	ptr1 = malloc(new_size);
+	if (!ptr1)
+		return (NULL);
+
+	old_ptr = ptr;
+
+	if (new_size < old_size)
+	{
+		for (i = 0; i < new_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
+
+	if (new_size > old_size)
+	{
+		for (i = 0; i < old_size; i++)
+			ptr1[i] = old_ptr[i];
+	}
+
+	free(ptr);
+	return (ptr1);
 }
-
+                                       
