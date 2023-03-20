@@ -11,11 +11,11 @@ void free_dog(dog_t *d);
  * @age: age of user
  * @owner: The ownwer info
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} my_dog;
 
 #endif
