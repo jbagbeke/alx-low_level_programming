@@ -6,6 +6,7 @@
  * @name: Name to be entered
  * @age: age of dog
  * @owner: The ownwer dog
+ * Description: Struct is for dog
  */
 struct dog
 {
