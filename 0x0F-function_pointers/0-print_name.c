@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "function_pointers.h"
-#include <ctype.h>
 
 /**
  * print_name_like_that - prints a name as is
@@ -29,11 +28,11 @@ void print_name_upper(char *name)
     {
         if (name[i] >= 'a' && name[i] <= 'z')
         {
-            putchar(name[i] + 'A' - 'a');
+            _putchar(name[i] + 'A' - 'a');
         }
         else
         {
-            putchar(name[i]);
+            _putchar(name[i]);
         }
         i++;
     }
