@@ -19,7 +19,7 @@ typedef struct node
 size_t print_listint(const listint_t *h)
 {
 	int n = 0;
-	const listint_t hey = h;
+	const listint_t *hey = h;
 
 	while (hey != NULL)
 	{
