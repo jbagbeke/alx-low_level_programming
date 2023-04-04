@@ -19,19 +19,16 @@ typedef struct node
 size_t print_listint(const listint_t *h)
 {
 	int n = 0;
-	listint_t hey = h;
-
-	if (hey == NULL)
-	{
-		return NULL;
-	}
+	const listint_t hey = h;
 
 	while (hey != NULL)
 	{
-		printf("%d", hey->data);
+		printf("%d ", hey->data);
 		hey = hey->next;
 		n++;
 	}
+
+	printf("\n");
 
 	return (n);
 }
