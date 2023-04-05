@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
-/*
- *get_nodeint_at_index - Function to nth node of linked list
+/**
+ *get_nodeint_at_index-Function to nth node of linked list
  *@head: Pointer to first node of list
  *@index: Position of node
  *Return: NULL
- *
+ *get_nodeint_at_index - Function to return nth node of linked list
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
