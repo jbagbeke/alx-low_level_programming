@@ -2,14 +2,17 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *
- *
- *
- *
+ *add_nodeint_end - add node at the end
+ *@head: Pointer to the head node
+ *@n: Data to fill the data part of new node
+ *Return: New node address
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *hey;
+	listint_t *hoo;
+
+	hoo = *head;
 
 	hey = malloc(sizeof(listint_t));
 	if (num2 = NULL)
@@ -20,12 +23,12 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	hey->n = n;
 	hey->next = NULL;
 
-	while(*head != NULL)
+	while(hoo->next != NULL)
 	{
-		*head = head->next;
+		hoo = hoo->next;
 	}
 	
-	*head->next = hey;
+	hoo->next = hey;
 	
 	return (hey);
 }
