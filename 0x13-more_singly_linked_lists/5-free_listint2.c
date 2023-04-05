@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *
- *
- *
+ *free_listint2 - Function to free nodes
+ *@head: Poiter to head node
+ *Return: Void
  *
  *
  */
