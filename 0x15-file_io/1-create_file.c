@@ -31,8 +31,8 @@ int create_file(const char *filename, char *text_content)
 		free(hey);
 	}
 	
-	writing = write(STDOUT_FILENO, hey, reading);
-	if (writing == -1)
+	writing = write(hoo, hey, reading);
+	if (writing == -1 || writing != reading)
 	{
 		return (-1);
 		close(hoo);
