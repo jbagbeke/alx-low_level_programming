@@ -3,9 +3,10 @@
 
 /**
  *
- *
- *
- *
+ *create_file - Function to create file
+ *@filename: Name of file  to be created
+ *@text_content: Content to be written to
+ *Return: 1 (Success), -1 (Failure)
  */
 int create_file(const char *filename, char *text_content)
 {
