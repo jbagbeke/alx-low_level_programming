@@ -1,11 +1,9 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
- *
- *
- *
- *
+ *read_textfile - Function that reads file
+ *@filename: Filename that contains letters
+ *@letters: Number of letters to be printed
+ *Return: Number of letters that was read and printed
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -16,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 	{
-	    return (0);
+	return (0);
 	}
 
 	hoo = open(filename, O_RDONLY);
@@ -33,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(h);
 		return (0);
 	}
-	
+
 	writing = write(STDOUT_FILENO, h, reading);
 	if (writing == -1 || writing != reading)
 	{
