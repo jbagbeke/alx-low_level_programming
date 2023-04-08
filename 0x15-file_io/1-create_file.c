@@ -2,7 +2,6 @@
 #include <string.h>
 
 /**
- *
  *create_file - Function to create file
  *@filename: Name of file  to be created
  *@text_content: Content to be written to
