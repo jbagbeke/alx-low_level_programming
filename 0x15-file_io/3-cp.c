@@ -20,7 +20,7 @@ void closing(int hey)
     return;
 }
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
     int writing, reading, file_to, file_from;
     char *buffer;
