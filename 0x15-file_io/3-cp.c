@@ -47,17 +47,11 @@ int main(int argc, char *argv[])
         {
             exit(99);
         }
-        if (close(fd_val == -1))
+        if (close(fd_val) == -1 || close(fd_value) == -1)
         {
             dprintf(2, "Error: Can't close fd %d", fd_val);
             exit(100);
-        }
-        if(close(fd_value == -1))
-        {
-            dprintf(2, "Error: Can't close fd %d", fd_value);
-            exit(100);
-        }
-    }
+    	}
 
     close(fd_val);
     close(fd_value);
