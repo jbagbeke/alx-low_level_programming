@@ -1,5 +1,4 @@
 #include "main.h"
-#define BUFF 1024
 /**
  *
  *
@@ -26,7 +25,7 @@ int main(int argc, char *argv[])
     int fd_val;
     int fd_value;
     int reading, writing;
-    char buffer[BUFF];
+    char *buffer;
 
     if (argc != 3)
     {
@@ -46,9 +45,10 @@ int main(int argc, char *argv[])
     {
         dprintf(2, "Error: Can't write to %s\n", argv[2]);
         exit(99);
-    }
+	}
+	buffer = malloc(sizeof(char) * 1024);
 
-    while ((reading = read(fd_val, buffer, BUFF)) > 0)
+    while ((reading = read(fd_val, buffer, 1024)) > 0)
     {
         writing = write(fd_value, buffer, reading);
         if (reading == -1)
@@ -61,10 +61,12 @@ int main(int argc, char *argv[])
         }
         closing(fd_val);
 	closing(fd_value);
+	free(buffer);
 	fd_value = open(argv[2], O_WRONLY | O_APPEND);
 }
 
     closing(fd_val);
     closing(fd_value);
+    free(buffer);
     return (0);
 }
