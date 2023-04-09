@@ -9,6 +9,18 @@
  *
  */
 
+void closing(int fd)
+{
+	int hoo;
+
+	hoo = close(fd);
+	if (hoo == -1)
+	{
+	dprintf(2, "Error: Can't close fd %d", hoo);
+	exit(100);
+	}
+}
+
 int main(int argc, char *argv[])
 {
     int fd_val;
@@ -47,14 +59,12 @@ int main(int argc, char *argv[])
         {
             exit(99);
         }
-        if (close(fd_val) == -1 || close(fd_value) == -1)
-        {
-            dprintf(2, "Error: Can't close fd %d", fd_val);
-            exit(100);
-    	}
+        closing(fd_val);
+	closing(fd_value);
+	fd_value = open(argv[2], O_WRONLY | O_APPEND);
 }
 
-    close(fd_val);
-    close(fd_value);
+    closing(fd_val);
+    closing(fd_value);
     return (0);
 }
