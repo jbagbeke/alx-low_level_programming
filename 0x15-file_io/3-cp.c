@@ -17,7 +17,6 @@ void closing(int hey)
         dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", hoo);
         exit(100);
     }
-    return;
 }
 
 int main(int argc, char *argv[])
@@ -31,14 +30,14 @@ int main(int argc, char *argv[])
         exit(97);
     }
 
-    file_from = open(argv[1], O_RDONLY | O_CREAT | O_EXCL, 0664);
-    file_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
+    file_from = open(argv[1], O_RDONLY);
+    file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
     buffer = malloc(1024 * sizeof(char));
     if (buffer == NULL)
     {
         dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-        exit(98);
+        exit(99);
     }
 
     while ((reading = read(file_from, buffer, 1024) > 0))
@@ -49,14 +48,12 @@ int main(int argc, char *argv[])
         {
             dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
             free(buffer);
-            closing(file_to);
             exit(98);
         }
         if (file_to == -1 || writing == -1)
         {
             dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
             free(buffer);
-            closing(file_from);
             exit(99);
         }
 
