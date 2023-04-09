@@ -51,6 +51,7 @@ int main(int argc, char *argv[])
             free(buffer);
             exit(98);
         }
+
         if (file_to == -1 || writing == -1)
         {
             dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -59,7 +60,8 @@ int main(int argc, char *argv[])
         }
 
         reading = read(file_from, buffer, 1024);
-        file_to = open(argv[2], O_WRONLY | O_APPEND);
+        writing = write(file_to, buffer, reading);
+	file_to = open(argv[2], O_WRONLY | O_APPEND);
     }
 
     free(buffer);
