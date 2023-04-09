@@ -27,7 +27,7 @@ void buff(char *filename)
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]0);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 }
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
     fd_value = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
 
-    buffer = buff(arg[2]);
+    buffer = buff(argv[2]);
     while ((reading = read(fd_val, buffer, BUFFER_SIZE)) > 0)
     {
         writing = write(fd_value, buffer, reading);
