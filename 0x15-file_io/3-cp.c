@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
         }
 
         reading = read(file_from, buffer, 1024);
-        file_to = open(argv[2], O_RDWR | O_APPEND);
+        file_to = open(argv[2], O_WRONLY | O_APPEND);
     }
 
     free(buffer);
