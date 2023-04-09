@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /*
  *
  *
@@ -59,8 +57,7 @@ int main(int argc, char *argv[])
             exit(99);
         }
 
-        reading = read(file_from, buffer, 1024);
-        writing = write(file_to, buffer, reading);
+        reading = read(file_from, buffer, 1024
 	file_to = open(argv[2], O_WRONLY | O_APPEND);
     }
 
