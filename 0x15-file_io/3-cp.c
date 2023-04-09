@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int writing, reading, file_to, file_from;
     char *buffer;
 
-    if (argc != 3)
+    if (argc != 2)
     {
         dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
         exit(97);
