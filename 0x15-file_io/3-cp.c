@@ -9,30 +9,30 @@
  *
  */
 
-int copy_from_to(const char *file_from, const char *file_to)
+int main(int argc, char *argv[])
 {
     int fd_val;
     int fd_value;
     int reading, writing;
     char buffer[BUFF];
 
-    if (file_from == NULL || file_to == NULL)
+    if (argc != 3)
     {
         dprintf(2, "Usage: cp file_from file_to\n");
         exit(97);
     }
 
-    fd_val = open(file_from, O_RDONLY | O_CREAT | O_EXCL, 0664);
+    fd_val = open(argv[1], O_RDONLY | O_CREAT | O_EXCL, 0664);
     if (fd_val == -1)
     {
-        dprintf(2, "Error: Can't read from file %s\n", "file_from");
+        dprintf(2, "Error: Can't read from file %s\n", argv[1]);
         exit(98);
     }
 
-    fd_value = open(file_to, O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
+    fd_value = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
     if (fd_value == -1)
     {
-        dprintf(2, "Error: Can't write to %s\n", "file_to");
+        dprintf(2, "Error: Can't write to %s\n", argv[2]);
         exit(99);
     }
 
