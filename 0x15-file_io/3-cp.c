@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
             dprintf(2, "Error: Can't close fd %d", fd_val);
             exit(100);
     	}
+}
 
     close(fd_val);
     close(fd_value);
