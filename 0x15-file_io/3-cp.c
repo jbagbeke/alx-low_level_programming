@@ -61,5 +61,5 @@ int main(int argc, char *argv[])
 
     close(fd_val);
     close(fd_value);
-    return (writing);
+    return (0);
 }
