@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         exit(97);
     }
 
-    fd_val = open(argv[1], O_RDONLY | O_CREAT | O_EXCL, 0664);
+    fd_val = open(argv[1], O_RDONLY);
     if (fd_val == -1)
     {
         dprintf(2, "Error: Can't read from file %s\n", argv[1]);
@@ -49,12 +49,12 @@ int main(int argc, char *argv[])
         }
         if (close(fd_val == -1))
         {
-            dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_val);
+            dprintf(2, "Error: Can't close fd %d", fd_val);
             exit(100);
         }
         if(close(fd_value == -1))
         {
-            dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_value);
+            dprintf(2, "Error: Can't close fd %d", fd_value);
             exit(100);
         }
     }
