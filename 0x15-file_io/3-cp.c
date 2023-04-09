@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 
 	buffer = buffering(argv[2]);
 
-	while ((reading = read(file_from, buffer, 1024) > 0))
+	do
 	{
 	writing = write(file_to, buffer, reading);
 
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
 	reading = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (reading > 0);
 
 	free(buffer);
 	closing(file_from);
