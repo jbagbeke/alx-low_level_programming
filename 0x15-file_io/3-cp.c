@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 	free(buffer);
 	exit(98);
 	}
-	
+
 	writing = write(file_to, buffer, reading);
 	if (file_to == -1 || writing == -1)
 	{
