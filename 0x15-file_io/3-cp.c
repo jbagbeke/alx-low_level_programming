@@ -20,7 +20,7 @@ void closing(int fd)
 	}
 }
 
-void buff(char *filename)
+void *buff(char *filename)
 {
 	char *buffer;
 
@@ -30,9 +30,10 @@ void buff(char *filename)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
+
+	return (buffer);
 }
 
-#define BUFFER_SIZE 1024
 
 int main(int argc, char *argv[])
 {
@@ -52,7 +53,7 @@ int main(int argc, char *argv[])
     fd_value = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
 
     buffer = buff(argv[2]);
-    while ((reading = read(fd_val, buffer, BUFFER_SIZE)) > 0)
+    while ((reading = read(fd_val, buffer, 1024)) > 0)
     {
         writing = write(fd_value, buffer, reading);
         if (reading == -1 || fd_val == -1)
