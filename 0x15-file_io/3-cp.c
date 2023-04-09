@@ -53,20 +53,23 @@ int main(int argc, char *argv[])
         writing = write(fd_value, buffer, reading);
         if (reading == -1)
         {
-            exit(98);
+            free(buffer);
+	    exit(98);
         }
         if (writing == -1)
         {
-            exit(99);
+            free(buffer);
+	    exit(99);
         }
+	
+	free(buffer);
         closing(fd_val);
 	closing(fd_value);
-	free(buffer);
 	fd_value = open(argv[2], O_WRONLY | O_APPEND);
 }
 
-    closing(fd_val);
-    closing(fd_value);
-    free(buffer);
-    return (0);
+	free(buffer);
+	closing(fd_val);
+	closing(fd_value);
+	return (0);
 }
