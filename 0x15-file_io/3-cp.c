@@ -68,11 +68,13 @@ int main(int argc, char *argv[])
 	    free(buffer);
 	    exit(99);
       }
-        free(buffer);
-	closing(fd_val);
-	closing(fd_value);
+        reading = read(fd_val, buffer, 1024);
 	fd_value = open(argv[2], O_WRONLY | O_APPEND);
-}
+
+	free(buffer);
+        closing(fd_val);
+        closing(fd_value);
+    }
 
 	free(buffer);
 	closing(fd_val);
