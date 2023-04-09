@@ -7,7 +7,6 @@
  *
  *
  */
-void closing(int hey);
 
 void closing(int hey)
 {
@@ -26,14 +25,14 @@ int main(int argc, char *argv[])
     int writing, reading, file_to, file_from;
     char *buffer;
 
-    if (argc != 2)
+    if (argc != 3)
     {
         dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
         exit(97);
     }
 
     file_from = open(argv[1], O_RDONLY);
-    file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+    file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
     buffer = malloc(1024 * sizeof(char));
     if (buffer == NULL)
