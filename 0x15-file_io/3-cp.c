@@ -9,52 +9,52 @@
  *
  */
 
-int copyfile_from_to(const char *file_from, const char *file_to)
+int copy_from_to(const char *file_from, const char *file_to)
 {
     int fd_val;
     int fd_value;
-    int hoo, reading, writing;
+    int reading, writing;
     char buffer[BUFF];
 
     if (file_from == NULL || file_to == NULL)
     {
-        dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+        dprintf(2, "Usage: cp file_from file_to\n");
         exit(97);
     }
 
     fd_val = open(file_from, O_RDONLY | O_CREAT | O_EXCL, 0664);
     if (fd_val == -1)
     {
-        dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", "file_from");
+        dprintf(2, "Error: Can't read from file %s\n", "file_from");
         exit(98);
     }
 
     fd_value = open(file_to, O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
     if (fd_value == -1)
     {
-        printf(STDERR_FILENO, "Error: Can't write to %d\n", "file_to");
+        dprintf(2, "Error: Can't write to %s\n", "file_to");
         exit(99);
     }
 
-    while (reading = read(fd_val, buffer, BUFF) > 0)
+    while ((reading = read(fd_val, buffer, BUFF)) > 0)
     {
         writing = write(fd_value, buffer, reading);
         if (reading == -1)
         {
             exit(98);
         }
-        if (writing = -1)
+        if (writing == -1)
         {
             exit(99);
         }
         if (close(fd_val == -1))
         {
-            dprintf(STDERR_FILENO, "Error: Can't close fd %d", "fd_val");
+            dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_val);
             exit(100);
         }
         if(close(fd_value == -1))
         {
-            dprintf(STDERR_FILENO, "Error: Can't close fd %d", "fd_value");
+            dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_value);
             exit(100);
         }
     }
