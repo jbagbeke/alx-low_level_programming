@@ -31,6 +31,8 @@ unsigned int binary_to_uint(const char *b)
         d++;
     }
 
+    _putchar('\n');
+
     return (num);
 
 }
