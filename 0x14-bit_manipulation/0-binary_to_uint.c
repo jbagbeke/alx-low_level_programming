@@ -26,12 +26,10 @@ unsigned int binary_to_uint(const char *b)
         }
 
         hoo = b[i] - '0';
-        num += hoo * pow(2, d);
+        num += hoo;
 
         d++;
     }
-
-    _putchar('\n');
 
     return (num);
 
