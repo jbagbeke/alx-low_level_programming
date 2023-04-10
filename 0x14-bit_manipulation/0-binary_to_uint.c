@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  *
  *
@@ -12,6 +13,11 @@ unsigned int binary_to_uint(const char *b)
     int d = 0;
     int hoo;
 
+    if (b == NULL)
+    {
+    	return (0);
+    }
+
     for (i = strlen(b) - 1; i >= 0; i--)
     {
         if (b[i] != '0' && b[i] != '1')
@@ -24,8 +30,6 @@ unsigned int binary_to_uint(const char *b)
 
         d++;
     }
-
-    printf("%u\n", num);
 
     return (num);
 
