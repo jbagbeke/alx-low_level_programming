@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	int hey = 0;
 	unsigned long int hoo;
 
-	for (i = 70; i >= 0; i--)
+	for (i = 65; i >= 0; i--)
 	{
 	hoo = n >> i;
 
