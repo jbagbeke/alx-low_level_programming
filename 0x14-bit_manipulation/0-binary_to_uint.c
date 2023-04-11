@@ -10,6 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0;
 	int i;
+	int d = 0;
 	int hoo;
 
 	if (b == NULL)
@@ -25,8 +26,9 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	hoo = b[i] - '0';
-	num += hoo;
+	num += hoo + 2 * d;
 
+	d++;
 	}
 	return (num);
 }
