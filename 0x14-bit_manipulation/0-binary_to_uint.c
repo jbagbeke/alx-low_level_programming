@@ -3,7 +3,7 @@
 /**
  *binary_to_uint - Function to convert bin to dec
  *@b: Pointer to string of binary numbers
- *Return - Result of function (num)
+ *Return: Result of function (num), 0 (failure)
  *
  */
 unsigned int binary_to_uint(const char *b)
