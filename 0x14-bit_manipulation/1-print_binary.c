@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- *print_binary - Function to convert decimal to binary
- *@n: number to be converted to binary
- *Return: void
+ * print_binary - Function to convert decimal number to binary
+ * @n: number to convert to binary
  */
 void print_binary(unsigned long int n)
 {
@@ -11,7 +10,7 @@ void print_binary(unsigned long int n)
 	int hey = 0;
 	unsigned long int hoo;
 
-	for (i = 70; i >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
 	hoo = n >> i;
 
