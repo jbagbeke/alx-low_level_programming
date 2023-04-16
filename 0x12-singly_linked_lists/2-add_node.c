@@ -25,10 +25,6 @@ list_t *add_node(list_t **head, const char *str)
 	new_list->next = *head;
 	*head = new_list;
 
-	while (new_list != NULL)
-	{
-		new_list = new_list->next;
-	}
 	free(new_list);
 	return (new_list);
 }
