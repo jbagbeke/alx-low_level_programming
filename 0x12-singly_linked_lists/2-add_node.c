@@ -32,5 +32,5 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	free(new_list);
-	return (new_list);
+	return (*head);
 }
