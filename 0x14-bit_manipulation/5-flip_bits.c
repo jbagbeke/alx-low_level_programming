@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * flip_bits - counts the number of bit to change 
+ * flip_bits - counts the number of bit to change
  * @n: first number
  * @m: second number
  * Return: number of bits to be changed (hoo)
@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		hey = hehe >> i;
 		if (hey & 1)
-	hoo++;
+		hoo++;
 	}
 
 	return (hoo);
