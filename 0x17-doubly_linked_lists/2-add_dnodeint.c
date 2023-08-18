@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - adds node at beginning of d-list * @head: Pointer to a pointer to first node of d-list
+ * add_dnodeint - adds node at beginning of list
+ * @head: Pointer to a pointer to first node
  * @n: Integer to store in data part of node
  * Return: Pointer to first node of d-list
  */
