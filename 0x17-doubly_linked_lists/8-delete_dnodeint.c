@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - dels node at index
+ * delete_dnodeint_at_index - dels node at idx
  * @head: Pointer to first node of d-list
  * @index: index of node to delete
  * Return: 1(Success), 0 otherwise
