@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * delete_dnodeint_at_index - dels node at idx
  * @head: Pointer to first node of d-list
@@ -13,7 +12,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	ptr1 = *head;
 	if (ptr1 == NULL)
 		return (-1);
-
 	if (index == 0)
 	{
 		if (ptr1->next != NULL)
@@ -22,11 +20,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			ptr2->prev = NULL;
 			*head = ptr2;
 		}
-		else
-			*head = NULL;
-
 		free(ptr1);
-
 		return (1);
 	}
 
@@ -34,10 +28,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		ptr2 = ptr1;
 		ptr1 = ptr1->next;
-
 		if (!ptr1)
 			return (-1);
-
 		index--;
 	}
 
@@ -49,8 +41,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		ptr2->next = ptr3;
 		ptr3->prev = ptr2;
 	}
-
 	free(ptr1);
-
 	return (1);
 }
