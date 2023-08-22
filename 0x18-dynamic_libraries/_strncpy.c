@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_strncat - Function
+ *_strncpy - Function
  *@dest: Pointer 1
  *@src: Pointer 2
  *Return: void
