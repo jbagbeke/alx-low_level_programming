@@ -14,13 +14,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (!(size > 0))
 	{
 		fprintf(stderr, "Invalid Size of Hash Table\n");
-		exit(EXIT_FAILURE);
+		return (NULL);
 	}
 
 	hash_tab = malloc(sizeof(hash_table_t));
 
 	if (!hash_tab)
-		return NULL;
+		return (NULL);
 
 	hash_tab->size = size;
 
