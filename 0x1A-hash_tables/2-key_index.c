@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * key_index - Returns index of a string in a hash table using djd2 hash function
+ * key_index - Returns index of a key in a hash table using djd2 hash function
  * @key: The key whose index in the table is to be determined
  * @size: Size of the hash table to be created
  *
