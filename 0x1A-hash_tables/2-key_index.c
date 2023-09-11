@@ -10,7 +10,7 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	hash_table_t *hash_tab;
-	unsigned long int i, index;
+	unsigned long int index;
 
 	if (!(size > 0))
 	{
