@@ -16,8 +16,8 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 
 	if (hash_tab == NULL)
 	{
-		fprintf(stderr, "Error creating hash table\n");
-		exit(EXIT_FAILURE);
+		fprintf(stderr, "Error creating hash table");
+		return (-1);
 	}
 
 	index = hash_djb2(key);
