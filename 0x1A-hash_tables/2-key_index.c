@@ -12,7 +12,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	hash_table_t *hash_tab;
 	unsigned long int i, index;
 
-	if (size < 0)
+	if (!(size > 0))
 	{
 		fprintf(stderr, "Invalid Size of Hash Table");
 		return (-1);
