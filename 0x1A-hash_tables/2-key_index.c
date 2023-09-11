@@ -31,10 +31,5 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 
 	index = hash_djb2(key);
 
-	for (i = 0; i < size; i++)
-	{
-		hash_tab->array[i] = NULL;
-	}
-
 	return (index);
 }
