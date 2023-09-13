@@ -10,13 +10,16 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int index, size = 1024;
 	hash_node_t *hash_node, *traverse;
 	char *value_copied;
 
 	if (strlen(key) == 0)
 		return (0);
 
-	hash_node  = malloc(sizeof(hash_node_t *));
+	index = key_index((const unsigned char *)key, ht->size);
+
+	hash_node  = malloc(sizeof(hash_node_t));
 	value_copied = malloc((strlen(value) + 1) * sizeof(char));
 
 	if (!value_copied || !hash_node)
@@ -28,14 +31,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node->value = value_copied;
 	hash_node->next = NULL;
 
-	if (ht->array[0] == NULL)
+	if (ht->array[index] == NULL)
 	{
-		ht->array[0] = hash_node;
+		ht->array[index] = hash_node;
 	}
 
-	if (ht->array[0] != NULL)
+	if (ht->array[index] != NULL)
 	{
-		traverse = ht->array[0];
+		traverse = ht->array[index];
 
 		while (traverse->next != NULL)
 			traverse = traverse->next;
