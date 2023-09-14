@@ -29,16 +29,19 @@ void hash_table_print(const hash_table_t *ht)
 				printf("}\n");
 				break;
 			}
+
 			if (ind)
 				printf(", ");
 
-			do {
-				print_it = ht->array[i];
+			print_it = ht->array[i];
+
+			while (print_it != NULL)
+			{
 				printf("'%s': '%s'", hash_key, hash_val);
 				print_it = print_it->next;
 				if (print_it != NULL)
 					printf(", ");
-			} while (print_it != NULL);
+			}
 
 			ind = 1;
 		}
