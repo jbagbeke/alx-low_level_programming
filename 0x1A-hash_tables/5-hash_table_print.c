@@ -19,25 +19,19 @@ void hash_table_print(const hash_table_t *ht)
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i] == NULL)
-			continue;
-		hash_key = strdup(ht->array[i]->key);
-		hash_val = strdup(ht->array[i]->value);
+		if (ht->array[i] != NULL)
+		{
+			hash_key = strdup(ht->array[i]->key);
+			hash_val = strdup(ht->array[i]->value);
 
-		if (!hash_val || !hash_key)
-		{
-			printf("}\n");
-			break;
-		}
-		if (ind)
-			printf(", ");
-		if (ht->array[i]->next == NULL)
-		{
-			printf("'%s': '%s'", hash_key, hash_val);
-			ind = 1;
-		}
-		else
-		{
+			if (!hash_val || !hash_key)
+			{
+				printf("}\n");
+				break;
+			}
+			if (ind)
+				printf(", ");
+		
 			do {
 				print_it = ht->array[i];
 				printf("'%s': '%s'", hash_key, hash_val);
@@ -45,6 +39,8 @@ void hash_table_print(const hash_table_t *ht)
 				if (print_it != NULL)
 					printf(", ");
 			} while (print_it != NULL);
+
+			ind = 1;
 		}
 	}
 	printf("}\n");
