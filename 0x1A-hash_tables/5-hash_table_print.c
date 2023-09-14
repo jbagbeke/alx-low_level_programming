@@ -30,13 +30,13 @@ void hash_table_print(const hash_table_t *ht)
 				break;
 			}
 
-			if (ind)
-				printf(", ");
-
 			print_it = ht->array[i];
 
 			while (print_it != NULL)
 			{
+				if (ind == 1)
+					printf("cd, ");
+
 				printf("'%s': '%s'", hash_key, hash_val);
 				print_it = print_it->next;
 				if (print_it != NULL)
