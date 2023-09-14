@@ -34,13 +34,11 @@ void hash_table_print(const hash_table_t *ht)
 
 			while (print_it != NULL)
 			{
-				if (ind == 1)
+				if (ind)
 					printf("cd, ");
 
 				printf("'%s': '%s'", hash_key, hash_val);
 				print_it = print_it->next;
-				if (print_it != NULL)
-					printf(", ");
 			}
 
 			ind = 1;
