@@ -5,8 +5,7 @@ SRC = school.c main.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-$(OBJ): $(SRC)
-	$(CC) -c -o $@ $^
-
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o 
+	$(CC) -c -o main.o main.c
+	$(CC) -c -o school.o school.c
+	$(CC) $(OBJ) -o $(NAME)
