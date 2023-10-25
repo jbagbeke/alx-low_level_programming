@@ -6,7 +6,7 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 
 $(OBJ): $(SRC)
-	$(CC) -c $^
+	$(CC) -c -o $@ $^
 
 $(NAME): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(OBJ) -o 
