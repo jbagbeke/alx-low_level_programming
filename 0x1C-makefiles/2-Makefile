@@ -1,13 +1,12 @@
 all: $(NAME)
 
 CC = gcc
-SRC = %.c
-OBJ = %.o
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
 NAME = school
 
 $(OBJ): $(SRC)
-	$(CC) -c $(SRC) -o $(OBJ)
+	$(CC) -c $^
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
+	$(CC) $^ -o $@
