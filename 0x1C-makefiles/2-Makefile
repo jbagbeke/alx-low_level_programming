@@ -1,4 +1,4 @@
-all: school
+all: $(NAME)
 
 CC = gcc
 SRC = school.c main.c
