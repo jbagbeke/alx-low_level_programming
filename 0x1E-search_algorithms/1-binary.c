@@ -16,6 +16,9 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t index;
 
+	if (!array)
+		return (-1);
+
 	index = bin_srch(0, (size - 1) / 2, size - 1, value, array);
 
 	return (index);
