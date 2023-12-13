@@ -16,10 +16,10 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t index;
 
-	if (!array || !size || !value)
+	if (array && size)
+		index = bin_srch(0, (size - 1) / 2, size - 1, value, array);
+	else
 		return (-1);
-
-	index = bin_srch(0, (size - 1) / 2, size - 1, value, array);
 
 	return (index);
 }
@@ -39,10 +39,7 @@ size_t bin_srch(size_t low, size_t mid, size_t high, int value, int *array)
 	size_t idx, tmp;
 
 	if (low > high)
-	{
-		/*print_array(array, low, high);*/
 		return (-1);
-	}
 
 	print_array(array, low, high);
 
