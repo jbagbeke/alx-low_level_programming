@@ -38,9 +38,9 @@ size_t bin_srch(size_t low, size_t mid, size_t high, int value, int *array)
 {
 	size_t idx, tmp;
 
-	if (low >= high)
+	if (low > high)
 	{
-		print_array(array, low, high);
+		/*print_array(array, low, high);*/
 		return (-1);
 	}
 
