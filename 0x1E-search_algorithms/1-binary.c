@@ -19,7 +19,7 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	if (value < array[0] || value > array[size - 1])
+	if (value < array[0] && value > array[size - 1])
 		return (-1);
 
 	index = bin_srch(0, (size - 1) / 2, size - 1, value, array);
