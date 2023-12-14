@@ -19,15 +19,16 @@ int jump_search(int *array, size_t size, int value)
 	square = sqrt(size);
 	idx = square;
 
-	while (idx < size)
+	while (tidx < size)
 	{
 		printf("%s[%ld] = [%d]\n", ptf, tidx, array[tidx]);
 
-		if (array[idx] >= value)
+		if ((array[idx] >= value) || (tidx + square) > size)
 		{
+
 			printf("%s [%ld] and [%ld]\n", ptf2, tidx, idx);
 
-			for (i = tidx; i <= idx; i++)
+			for (i = tidx; i <= idx && i < size; i++)
 			{
 				if (array[i] == value)
 				{
@@ -42,10 +43,6 @@ int jump_search(int *array, size_t size, int value)
 		tidx = idx;
 		idx += square;
 	}
-
-	printf("%s[%ld] = [%d]\n", ptf, tidx, array[tidx]);
-	printf("%s [%ld] and [%ld]\n", ptf2, tidx, idx);
-	printf("%s[%ld] = [%d]\n", ptf, tidx, array[tidx]);
 
 	return (-1);
 }
