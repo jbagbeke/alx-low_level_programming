@@ -23,20 +23,17 @@ int jump_search(int *array, size_t size, int value)
 	{
 		printf("%s[%ld] = [%d]\n", ptf, tidx, array[tidx]);
 
-		if ((array[idx] >= value) || (tidx + square) > size)
+		if ((array[idx] >= value) || (tidx + square) >= size)
 		{
 
 			printf("%s [%ld] and [%ld]\n", ptf2, tidx, idx);
 
-			for (i = tidx; i <= idx && i < size; i++)
+			for (i = tidx; i <= tidx + square && i < size; i++)
 			{
-				if (array[i] == value)
-				{
-					printf("%s[%ld] = [%d]\n", ptf, i, array[i]);
-					return (i);
-				}
-
 				printf("%s[%ld] = [%d]\n", ptf, i, array[i]);
+
+				if (array[i] == value)
+					return (i);
 			}
 		}
 
